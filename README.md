@@ -9,6 +9,4 @@ fastapi dev
 
 # Integrantes
 ## Mateo Monsalve Ortega
-### CC: 
 ## Alejandro Sanchez Ruiz
-### CC: 
