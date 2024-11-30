@@ -6,7 +6,6 @@ class RoleEnum(str, Enum):
     GENERAL = "general"
 
 class PermissionsEnum(str, Enum):
-    VIEW = "ver"
     READ = "leer"
     EDIT = "editar" 
 
@@ -20,6 +19,6 @@ class Users(SQLModel, table=True):
     username: str
     password: str
     full_name: str
-    role: RoleEnum = Field(default=RoleEnum.GENERAL)
-    permissions: PermissionsEnum = Field(default=PermissionsEnum.EDIT)
+    role: str = Field(default="admin")
+    permissions: str = Field(default="editar")
 
