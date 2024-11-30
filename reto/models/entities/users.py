@@ -1,7 +1,5 @@
 from enum import Enum
-from sqlmodel import SQLModel
-from pydantic import Field
-
+from sqlmodel import SQLModel, Field
 
 class RoleEnum(str, Enum):
     ADMIN = "admin"
@@ -10,8 +8,7 @@ class RoleEnum(str, Enum):
 class PermissionsEnum(str, Enum):
     VIEW = "ver"
     READ = "leer"
-    EDIT = "editar"
-
+    EDIT = "editar" 
 
 '''Esta clase permite crear la tabla curso en la base de datos
     id de la categoria
