@@ -11,3 +11,6 @@ class CategoryRead(SQLModel):
 class CategoryCreate(SQLModel):
     name: str
     description: str   
+
+class CategoryUpdate(CategoryCreate):
+    pass
