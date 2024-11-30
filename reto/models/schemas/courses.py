@@ -14,3 +14,6 @@ class CoursesRead(SQLModel):
     course_type:str
     classroom:str
     credits:int
+
+class CourseUpdate(CoursesCreate):
+    pass

@@ -6,7 +6,7 @@ class UserCreate(SQLModel):
     full_name:str
 
 class UserRead(SQLModel):
-    id: int
+    id: int | None
     username: str
     password: str
     full_name: str
