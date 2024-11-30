@@ -2,11 +2,10 @@ from fastapi import FastAPI
 
 from database.db import create_all_tables
 
+from router.routes import routes
 
 app = FastAPI()
 
-@app.get("/")
-def saludo():
-    return {"saludo":"hola"}
+app.include_router(routes, prefix="/api")
 
 
