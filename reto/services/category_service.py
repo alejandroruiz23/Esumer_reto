@@ -4,8 +4,8 @@ from fastapi import Depends, HTTPException, status
 from sqlmodel import select
 
 from database.db import DBSession
-from reto.models.entities.category import Category
-from reto.models.schemas.category import CategoryRead
+from models.entities.category import Category
+from models.schemas.category import CategoryCreate, CategoryRead
 
 class CategoryService:
     def __init__(self, db: DBSession) -> None:
@@ -25,7 +25,7 @@ class CategoryService:
 
         return category
 
-    def create(self,category_data):
+    def create(self,category_data:CategoryCreate):
         category = Category.model_validate(category_data.model_dump())
         self.db.add(category)
         self.db.commit()
