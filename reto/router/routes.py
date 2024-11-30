@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-# from controllers.auth_controller import route as AuthRoute
+from controllers.auth_controller import route as AuthRoute
 from controllers.user_controller import route as UserRoute
 from controllers.category_controller import route as CategoryRoute
 
